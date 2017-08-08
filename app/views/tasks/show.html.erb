@@ -1,4 +1,7 @@
 <h1>Your task</h1>
 <h2><%= @task.title %></h2>
+
+<%= link_to "Edit task", tsk_path(@task) %>
+
 <%= link_to "Delete finished task", task_path(@task),
       method: :delete %>

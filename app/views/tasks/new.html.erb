@@ -1,8 +1,7 @@
 <h1>Enter new task</h1>
 
-<form action="/tasks" method="post">
-  <label for="task">Enter task</label>
-  <input type="text" name="task[title]">
-  <input type="submit">
-  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-</form>
+<%= form_for(@task) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.submit %>
+<% end %>

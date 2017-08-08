@@ -1,6 +1,6 @@
 <h1>Today's Tasks</h1>
 <% @tasks.each do |task| %>
-<h2> <%= link_to task.title, tsk_path(task) %> </h2>
+  <h2> <%= link_to task.title, task_path(task) %> </h2>
 <% end %>
 
 <%= link_to "Create new", tasks_new_path %>
